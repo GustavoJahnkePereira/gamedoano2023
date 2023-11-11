@@ -1,0 +1,296 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+
+}
+
+body {
+    background-color: black;
+}
+
+#background {
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#background video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#background::after {
+    content: '';
+
+    width: inherit;
+    height: inherit;
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    color: aliceblue;
+    margin-top: 28px;
+    align-items: center;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+nav img {
+    height: 75px;
+    cursor: pointer;
+    transition: all 0.4s;
+
+}
+
+nav img:hover {
+    transform: translateY(-5px);
+}
+
+.navItens {
+    align-items: center;
+    list-style: none;
+    display: flex;
+    font-weight: 30px;
+    font-size: 23px;
+}
+
+.navItens>li {
+    transition: all 0.4s;
+}
+
+.navItens>li>a {
+    font-size: 23px;
+    padding-left: 40px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.navItens>li>a:hover {
+    color: #5E2DBF;
+}
+
+.navItens>li:hover {
+    transform: translateY(-5px);
+}
+
+.logCad>a {
+    font-weight: 30px;
+    align-items: center;
+    padding: 5px;
+    font-size: 23px;
+    color: white;
+    text-decoration: none;
+    list-style: none;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.logCad a:hover {
+    color: #5E2DBF;
+}
+
+.logCad button:hover {
+    background-color: white;
+    color: #5E2DBF;
+    transform: translateY(-5px);
+}
+
+.logCad button {
+    font-weight: 30px;
+    align-items: center;
+    padding: 5px;
+    font-size: 23px;
+    color: white;
+    text-decoration: none;
+    background-color: #5E2DBF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition: all 0.4s;
+
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    height: 100vh;
+    margin: 0;
+}
+
+.mainTitle {
+    font-size: 180px;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.mainTitle2 {
+    font-size: 200px;
+    color: #5E2DBF;
+    text-shadow: 15px;
+    font-family: 'Press Start 2P', sans-serif;
+}
+
+.mainSubtitle {
+    font-weight: lighter;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 45px;
+
+}
+
+.btn-VoteAqui {
+    font-weight: 30px;
+    align-items: center;
+    margin: 25px;
+    padding: 5px;
+    padding-right: 20px;
+    padding-left: 20px;
+    font-size: 50px;
+    color: white;
+    text-decoration: none;
+    background-color: #5E2DBF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Bebas Neue', sans-serif;
+    transition: all 0.4s;
+}
+
+.btn-VoteAqui:hover {
+    background-color: white;
+    color: #5E2DBF;
+    transform: translateY(-5px);
+}
+
+
+footer {
+
+    color: white;
+    background-color: #5E2DBF;
+
+}
+
+footer h2 {
+    display: flex;
+    font-size: 17px;
+    justify-content: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 200;
+    text-align: center;
+
+}
+
+.divFooter {
+    padding: 10px;
+}
+
+/* Estilos padrão */
+
+/* ... (seus estilos existentes) ... */
+
+/* Media Query para telas menores que 768px (por exemplo, dispositivos móveis) */
+@media screen and (max-width: 767px) {
+    nav img {
+        height: 50px;
+    }
+
+    .navItens {
+        font-size: 20px;
+    }
+
+    .mainTitle {
+        font-size: 120px;
+    }
+
+    .mainTitle2 {
+        font-size: 140px;
+    }
+
+    .mainSubtitle {
+        font-size: 25px;
+    }
+
+    .btn-VoteAqui {
+        font-size: 30px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    nav img {
+        height: 60px;
+        
+    }
+
+    .navItens {
+        font-size: 24px;
+        
+    }
+
+    .mainTitle {
+        font-size: 160px;
+        
+    }
+
+    .mainTitle2 {
+        font-size: 180px;
+        
+    }
+
+    .mainSubtitle {
+        font-size: 30px;
+        
+    }
+
+    .btn-VoteAqui {
+        font-size: 36px;
+        
+    }
+}
+
+
+@media screen and (min-width: 1024px) {
+    nav img {
+        height: 75px;
+        
+    }
+
+    .navItens {
+        font-size: 28px;
+        
+    }
+
+    .mainTitle {
+        font-size: 180px;
+        
+    }
+
+    .mainTitle2 {
+        font-size: 200px;
+        
+    }
+
+    .mainSubtitle {
+        font-size: 45px;
+        
+    }
+
+    .btn-VoteAqui {
+        font-size: 50px;
+        
+    }
+}
